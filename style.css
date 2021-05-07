@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   font-size: 10px;
@@ -17,7 +17,8 @@ body {
 .search {
   width: 70%;
   height: 100%;
-  /* padding-left: 4rem; */
+  position: relative;
+  z-index: 1;
 }
 
 .nominations {
@@ -27,6 +28,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
+  overflow-y: scroll;
 }
 
 .search__title {
@@ -64,19 +66,37 @@ body {
   margin: 0 auto;
 }
 
-.search__banner {
+.search__banner,
+.main__banner {
   height: 5rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #5b88e86a;
+  text-align: center;
   font-size: 1.3rem;
   transition: all 0.5s ease-in;
   visibility: hidden;
+  z-index: 10;
+}
+
+.search__banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1857df79;
+}
+
+.main__banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #1857df;
+}
+
+.main__banner.show__banner {
+  transform: translateY(-5rem);
+  visibility: visible;
 }
 
 .search__banner.show__banner {
@@ -107,8 +127,6 @@ body {
   width: 50%;
   height: 90%;
   margin: auto 0;
-  display: flex;
-  flex-direction: column;
 }
 .movie__desc-title,
 .movie__desc-year,
@@ -155,7 +173,7 @@ body {
 
 .nominee {
   width: 100%;
-  height: 20rem;
+  height: auto;
   margin: 2rem auto;
   border-bottom: 4px solid #ffffff;
 }
@@ -164,18 +182,21 @@ body {
   height: 80%;
   width: 100%;
   margin: 0 0 1rem;
+  min-height: 15rem;
+  height: auto;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .nominee__poster {
-  height: 100%;
-  width: auto;
-  max-width: 40%;
+  width: 40%;
 }
+
 .nominee__desc-title {
-  width: 60%;
+  width: 50%;
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .remove {
@@ -187,4 +208,140 @@ body {
 .fa-minus-square {
   color: #5b88e8;
   transition: all 0.5s ease-in;
+}
+
+.box__open,
+.box__close {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #000000;
+  background-color: #5b88e8;
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.box__close {
+  top: 7rem;
+  right: 0;
+  z-index: 200;
+}
+
+/* media query */
+@media screen and (max-width: 1436px) {
+  .nominee__desc-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  .nominee__desc {
+    flex-direction: column;
+  }
+  .nominee__desc-title {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  .nominee__poster {
+    width: 80%;
+  }
+
+  .form-group {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .search__results {
+    width: 100%;
+    margin: 0;
+  }
+
+  .movie {
+    width: 95%;
+  }
+
+  .nominations__title {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .remove {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .search__title {
+    text-align: center;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .nominations {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+    z-index: 9;
+    overflow-y: scroll;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .label {
+    margin-bottom: 1rem;
+  }
+
+  .input {
+    width: 90%;
+  }
+
+  .main__banner.show__banner {
+    transform: translateY(-6rem);
+    visibility: visible;
+  }
+
+  .search__banner.show__banner {
+    transform: translateY(8rem);
+    visibility: visible;
+  }
+
+  .box__open,
+  .box__close {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movie {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .movie__poster {
+    max-width: unset;
+    width: 70%;
+    /* height: 70%; */
+  }
+
+  .movie__desc {
+    width: 100%;
+    height: 30%;
+    margin: 0;
+  }
 }
