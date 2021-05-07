@@ -158,7 +158,7 @@ document.addEventListener("click", function (e) {
     nominations.style.transform = "translateX(-100%)";
   }
   if (e.target.classList.contains("box__close")) {
-    nominations.style.transform = "translateX(100%)";
+    nominations.style.transform = "translateX(100%)"; 
   }
 });
 
