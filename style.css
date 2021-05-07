@@ -42,6 +42,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
 .label {
@@ -63,12 +64,33 @@ body {
   margin: 0 auto;
 }
 
+.search__banner {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5b88e86a;
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in;
+  visibility: hidden;
+}
+
+.search__banner.show__banner {
+  transform: translateY(5rem);
+  visibility: visible;
+}
+
 .movie {
   background-color: #5985ad08;
   border-radius: 13px;
   border: 1px solid #6390b0;
-  height: 25rem;
-  width: 80%;
+  min-height: 25rem;
+  height: auto;
+  width: 90%;
   margin: 0 auto 2rem;
   display: flex;
   justify-content: space-around;
@@ -78,6 +100,7 @@ body {
 .movie__poster {
   height: 90%;
   width: auto;
+  max-width: 40%;
 }
 .movie__desc {
   align-self: flex-start;
