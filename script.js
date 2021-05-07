@@ -1,5 +1,3 @@
-const API_KEY = "29a0f7df";
-
 const userInput = document.querySelector(".input");
 const searchResults = document.querySelector(".search__results");
 const searchBanner = document.querySelector(".search__banner");
@@ -23,7 +21,7 @@ const fetchData = async function (url) {
 const getData = async function (input) {
   try {
     const data = await fetchData(
-      `http://www.omdbapi.com/?s=${input}&apikey=29a0f7df&`
+      `https://www.omdbapi.com/?s=${input}&apikey=29a0f7df&`
     );
 
     render(data, false);
@@ -122,7 +120,7 @@ async function addNominee(movieId) {
   if (checkForRepeat(movieId)) return;
 
   const movie = await fetchData(
-    `http://www.omdbapi.com/?i=${movieId}&apikey=29a0f7df&`
+    `https://www.omdbapi.com/?i=${movieId}&apikey=29a0f7df&`
   );
 
   nominatedMovies.unshift(movie);
@@ -158,7 +156,7 @@ document.addEventListener("click", function (e) {
     nominations.style.transform = "translateX(-100%)";
   }
   if (e.target.classList.contains("box__close")) {
-    nominations.style.transform = "translateX(100%)"; 
+    nominations.style.transform = "translateX(100%)";
   }
 });
 
