@@ -1,0 +1,160 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  display: flex;
+}
+
+.search {
+  width: 70%;
+  height: 100%;
+  padding-left: 4rem;
+}
+
+.nominations {
+  width: 30%;
+  height: 100%;
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.search__title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.form-group {
+  width: 60%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.label {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.input {
+  font-size: 1.6rem;
+  width: 60%;
+  outline: none;
+  padding: 1rem 1rem;
+  border-radius: 13px;
+  border: 1px solid #dbdbdb;
+}
+
+.search__results {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.movie {
+  background-color: #f2f2f2;
+  border-radius: 13px;
+  border: 1px solid #dbdbdb;
+  height: 25rem;
+  width: 80%;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.movie__poster {
+  height: 90%;
+  width: auto;
+}
+.movie__desc {
+  align-self: flex-start;
+  width: 50%;
+  height: 90%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.movie__desc-title,
+.movie__desc-year,
+.movie__desc-genre {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.nominate,
+.remove {
+  margin: auto 0 0 auto;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.fa-plus-square {
+  color: #ff0000;
+  transition: all 0.5s ease-in;
+}
+
+.nominate:hover .fa-plus-square,
+.remove:hover .fa-minus-square {
+  transform: rotate(180deg);
+}
+
+.nominate:hover,
+.remove:hover {
+  font-size: 2.2rem;
+}
+
+.nominations__title {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.nominee {
+  width: 95%;
+  height: 20rem;
+  margin: 2rem auto;
+  border-bottom: 4px solid #ffffff;
+}
+
+.nominee__desc {
+  height: 80%;
+  width: 100%;
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.nominee__poster {
+  height: 100%;
+  width: auto;
+  max-width: 40%;
+}
+.nominee__desc-title {
+  width: 60%;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.remove {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fa-minus-square {
+  color: #5b88e8;
+  transition: all 0.5s ease-in;
+}

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>The Shoppies</title>
+</head>
+<body>
+    <section class="search">
+        <h1 class="search__title">The Shoppies</h1>
+        <div class="form-group">
+            <label class="label">Search Movie</label>
+            <input class="input" placeholder="Name Movie"></input>
+        </div>
+        <div class="search__results">
+            <div class="movie">
+                <img class="movie__poster" src="https://sir.wdwnt.com/wdwnt.com/2020/06/hamilton-poster-7.jpg" alt="Movie Poster">
+                <div class="movie__desc">
+                    <p class="movie__desc-title">Title: </p>
+                    <p class="movie__desc-year">Year: </p>
+                    <p class="movie__desc-genre">Genre: </p>
+                    <p class="nominate">Nominate <i class="fas fa-plus-square"></i></p>
+                </div>
+            </div>
+            <div class="movie">
+                <img class="movie__poster" src="https://sir.wdwnt.com/wdwnt.com/2020/06/hamilton-poster-7.jpg" alt="Movie Poster">
+                <div class="movie__desc">
+                    <p class="movie__desc-title">Title: </p>
+                    <p class="movie__desc-year">Year: </p>
+                    <p class="movie__desc-genre">Genre: </p>
+                    <p class="nominate">Nominate <i class="fas fa-plus-square"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nominations">
+        <h1 class="nominations__title">Nomination List</h1>
+        <!-- <h1 class="nominations__title">Pick your favorite movies to nominate.</h1> -->
+        <div class="nominee">
+            <div class="nominee__desc">
+                <img class="nominee__poster" src="https://sir.wdwnt.com/wdwnt.com/2020/06/hamilton-poster-7.jpg" alt="nominee Poster">
+                <p class="nominee__desc-title">Title</p>
+                <!-- <p class="nominee__desc-year">year</p> -->
+                <!-- <p class="nominee__desc-genre">genre</p> -->
+            </div>
+            <p class="remove"><i class="fas fa-minus-square"></i> Remove</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
