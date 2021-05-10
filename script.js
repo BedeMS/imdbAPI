@@ -61,7 +61,7 @@ function moviesListMarkUp(data) {
           <div class="movie__desc">
               <p class="movie__desc-title">Title: <span class="movie-title">${movie.Title}</span></p>
               <p class="movie__desc-year">Year: <span class="movie-year">${movie.Year}</span></p>
-              <p class="movie__desc-year">Year: <span class="movie-year">${movie.Genre}</span></p>
+              <p class="movie__desc-year">Genre: <span class="movie-year">${movie.Genre}</span></p>
               <p class="nominate">Nominate <i class="fas fa-plus-square"></i></p>
           </div>
       </div>
